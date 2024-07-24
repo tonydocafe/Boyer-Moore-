@@ -2,7 +2,7 @@
 #include <string.h>
 
 #define TAMANHO_ALFABETO 256 // Tamanho do alfabeto (ASCII)
-
+#define MAX 100
 int maximo(int a, int b) {
     return (a > b) ? a : b;
 }
@@ -58,9 +58,12 @@ void buscaBoyerMoore(char *texto, char *padrao) {
 }
 
 int main() {
-    char texto[] = "abacaabadcabacabaabb";
-    char padrao[] = "bad";
-
+    char texto[MAX];
+    char padrao[MAX];
+    printf("digite o texto:\n");
+    scanf("%s",texto);
+    printf("digite o padrão:\n");
+    scanf("%s",texto);
     buscaBoyerMoore(texto, padrao);
 
     return 0;
